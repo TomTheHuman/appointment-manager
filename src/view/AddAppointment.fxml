@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: #62607B;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddAppointment">
+    <children>
+        <AnchorPane fx:id="anchorContainer" layoutX="15.0" layoutY="66.0" prefHeight="370.0" prefWidth="971.0" style="-fx-background-color: #A09DC3; -fx-background-radius: 30;">
+            <children>
+                <Label fx:id="labelAppointmentId" layoutX="14.0" layoutY="59.0" prefHeight="34.0" prefWidth="200.0" text="Appointment ID">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="textFieldAppointmentId" disable="true" editable="false" layoutX="214.0" layoutY="62.0" prefHeight="28.0" prefWidth="250.0" />
+                <Label fx:id="labelTitle" layoutX="14.0" layoutY="103.0" prefHeight="34.0" prefWidth="200.0" text="Title">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="textFieldTitle" layoutX="214.0" layoutY="106.0" prefHeight="28.0" prefWidth="250.0" />
+                <Label fx:id="labelDescription" layoutX="14.0" layoutY="146.0" prefHeight="34.0" prefWidth="200.0" text="Description">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="textFieldDescription" layoutX="214.0" layoutY="149.0" prefHeight="28.0" prefWidth="250.0" />
+                <Label fx:id="labelLocation" layoutX="14.0" layoutY="189.0" prefHeight="34.0" prefWidth="200.0" text="Location">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="textFieldLocation" layoutX="214.0" layoutY="192.0" prefHeight="28.0" prefWidth="250.0" />
+                <Label fx:id="labelContact" layoutX="14.0" layoutY="233.0" prefHeight="34.0" prefWidth="200.0" text="Contact">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="comboContact" layoutX="214.0" layoutY="236.0" prefHeight="28.0" prefWidth="250.0" promptText="Click to select..." />
+                <Label fx:id="labelType" layoutX="14.0" layoutY="276.0" prefHeight="34.0" prefWidth="200.0" text="Type">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="textFieldType" layoutX="214.0" layoutY="279.0" prefHeight="28.0" prefWidth="250.0" />
+            <Label fx:id="labelStartDate" layoutX="486.0" layoutY="59.0" prefHeight="34.0" prefWidth="200.0" text="Start Date/Time">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textFieldStartDate" layoutX="686.0" layoutY="62.0" prefHeight="28.0" prefWidth="250.0" promptText="Format: MM-DD-YYYY 00:00 AM" />
+            <Label fx:id="labelEndDate" layoutX="486.0" layoutY="103.0" prefHeight="34.0" prefWidth="200.0" text="End Date/Time">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textFieldEndDate" layoutX="686.0" layoutY="106.0" prefHeight="28.0" prefWidth="250.0" promptText="Format: MM-DD-YYYY 00:00 AM" />
+            <Label fx:id="labelCustomer" layoutX="486.0" layoutY="146.0" prefHeight="34.0" prefWidth="200.0" text="Customer ID">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelUserId" layoutX="486.0" layoutY="189.0" prefHeight="34.0" prefWidth="200.0" text="User ID">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="comboCustomerId" layoutX="686.0" layoutY="149.0" prefHeight="28.0" prefWidth="250.0" promptText="Click to select..." />
+            <ComboBox fx:id="comboUserId" layoutX="686.0" layoutY="192.0" prefHeight="28.0" prefWidth="250.0" promptText="Click to select..." />
+            </children>
+        </AnchorPane>
+        <Label fx:id="labelHeader" layoutX="14.0" layoutY="23.0" text="Add Appointment" textFill="WHITE">
+            <font>
+                <Font name="Segoe UI Bold" size="24.0" />
+            </font>
+        </Label>
+        <Button fx:id="buttonCancel" layoutX="887.0" layoutY="457.0" mnemonicParsing="false" onAction="#onActionCancel" prefHeight="29.0" prefWidth="85.0" text="Cancel" />
+        <Button fx:id="buttonSave" layoutX="789.0" layoutY="457.0" mnemonicParsing="false" onAction="#onActionSave" prefHeight="29.0" prefWidth="85.0" text="Save" />
+    </children>
+</AnchorPane>

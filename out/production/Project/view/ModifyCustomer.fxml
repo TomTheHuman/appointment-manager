@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="1000.0" style="-fx-background-color: #62607B;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifyCustomer">
+    <children>
+        <AnchorPane fx:id="anchorContainer" layoutX="15.0" layoutY="66.0" prefHeight="320.0" prefWidth="971.0" style="-fx-background-color: #A09DC3; -fx-background-radius: 30;">
+            <children>
+                <Label fx:id="labelCustomerId" layoutX="14.0" layoutY="59.0" prefHeight="34.0" prefWidth="200.0" text="Customer ID">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="textFieldCustomerId" disable="true" editable="false" layoutX="214.0" layoutY="62.0" prefHeight="28.0" prefWidth="250.0" />
+                <Label fx:id="labelName" layoutX="14.0" layoutY="103.0" prefHeight="34.0" prefWidth="200.0" text="Name">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="textFieldName" layoutX="214.0" layoutY="106.0" prefHeight="28.0" prefWidth="250.0" />
+                <Label fx:id="labelAddress" layoutX="14.0" layoutY="146.0" prefHeight="34.0" prefWidth="200.0" text="Address">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="textFieldAddress" layoutX="214.0" layoutY="149.0" prefHeight="28.0" prefWidth="250.0" promptText="Ex. 123 Lake View Dr, Los Angeles" />
+                <Label fx:id="labelPostalCode" layoutX="14.0" layoutY="189.0" prefHeight="34.0" prefWidth="200.0" text="Postal Code">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="textFieldPostalCode" layoutX="214.0" layoutY="192.0" prefHeight="28.0" prefWidth="250.0" />
+                <Label fx:id="labelPhoneNumber" layoutX="14.0" layoutY="233.0" prefHeight="34.0" prefWidth="200.0" text="Phone Number">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="textFieldPhoneNumber" layoutX="214.0" layoutY="236.0" prefHeight="28.0" prefWidth="250.0" promptText="Use format: (000) 000-0000" />
+                <Label fx:id="labelCountry" layoutX="486.0" layoutY="59.0" prefHeight="34.0" prefWidth="200.0" text="Country">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="labelStateProvince" layoutX="486.0" layoutY="103.0" prefHeight="34.0" prefWidth="200.0" text="State/Province">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="comboCountry" layoutX="686.0" layoutY="62.0" onAction="#onActionFilter" prefHeight="28.0" prefWidth="250.0" promptText="Click to select..." />
+                <ComboBox fx:id="comboStateProvince" layoutX="686.0" layoutY="106.0" prefHeight="28.0" prefWidth="250.0" promptText="Click to select..." />
+            </children>
+        </AnchorPane>
+        <Label fx:id="labelHeader" layoutX="14.0" layoutY="23.0" text="Modify Customer" textFill="WHITE">
+            <font>
+                <Font name="Segoe UI Bold" size="24.0" />
+            </font>
+        </Label>
+        <Button fx:id="buttonCancel" layoutX="886.0" layoutY="404.0" mnemonicParsing="false" onAction="#onActionCancel" prefHeight="29.0" prefWidth="85.0" text="Cancel" />
+        <Button fx:id="buttonSave" layoutX="788.0" layoutY="404.0" mnemonicParsing="false" onAction="#onActionSave" prefHeight="29.0" prefWidth="85.0" text="Save" />
+    </children>
+</AnchorPane>

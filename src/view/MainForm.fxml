@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="770.0" prefWidth="1200.0" style="-fx-background-color: #62607B;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainForm">
+   <children>
+      <AnchorPane fx:id="anchorTables" layoutX="20.0" layoutY="66.0" prefHeight="639.0" prefWidth="1160.0" style="-fx-background-color: #A09DC3; -fx-background-radius: 30;">
+         <children>
+            <TableView fx:id="tableViewCustomers" layoutX="15.0" layoutY="56.0" prefHeight="175.0" prefWidth="1130.0">
+              <columns>
+                <TableColumn fx:id="custIdCol" prefWidth="50.0" text="Cust ID" />
+                <TableColumn fx:id="custNameCol" prefWidth="115.0" text="Name" />
+                  <TableColumn fx:id="custAddressCol" prefWidth="190.0" text="Address" />
+                  <TableColumn fx:id="custPostalCodeCol" prefWidth="75.0" text="Postal Code" />
+                  <TableColumn fx:id="custPhoneCol" prefWidth="105.0" text="Phone" />
+                  <TableColumn fx:id="custCreatedCol" prefWidth="150.0" text="Created" />
+                  <TableColumn fx:id="custCreatedByCol" prefWidth="105.0" text="Created By" />
+                  <TableColumn fx:id="custLastUpdatedCol" prefWidth="150.0" text="Last Updated" />
+                  <TableColumn fx:id="custLastUpdatedByCol" prefWidth="105.0" text="Updated By" />
+                  <TableColumn fx:id="custFirstLevelDivCol" prefWidth="85.0" text="State/Prov." />
+              </columns>
+            </TableView>
+            <TableView fx:id="tableViewAppointments" layoutX="15.0" layoutY="325.0" prefHeight="243.0" prefWidth="1130.0">
+              <columns>
+                  <TableColumn fx:id="appIdCol" prefWidth="100.0" text="Appointment ID" />
+                <TableColumn fx:id="appTitleCol" prefWidth="120.0" text="Title" />
+                <TableColumn fx:id="appDescriptionCol" minWidth="0.0" prefWidth="140.0" text="Description" />
+                  <TableColumn fx:id="appLocationCol" minWidth="0.0" prefWidth="100.0" text="Location" />
+                  <TableColumn fx:id="appContactCol" minWidth="0.0" prefWidth="120.0" text="Contact" />
+                  <TableColumn fx:id="appTypeCol" minWidth="0.0" prefWidth="110.0" text="Type" />
+                  <TableColumn fx:id="appStartCol" minWidth="0.0" prefWidth="175.0" text="Start Date/Time" />
+                  <TableColumn fx:id="appEndCol" minWidth="0.0" prefWidth="175.0" text="End Date/Time" />
+                  <TableColumn fx:id="appCustCol" minWidth="0.0" prefWidth="90.0" text="Customer ID" />
+              </columns>
+            </TableView>
+            <Label fx:id="labelCustomers" layoutX="15.0" layoutY="22.0" prefHeight="34.0" prefWidth="85.0" text="Customers">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelAppointments" layoutX="15.0" layoutY="291.0" prefHeight="34.0" prefWidth="113.0" text="Appointments">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="buttonDeleteCustomer" layoutX="1060.0" layoutY="242.0" mnemonicParsing="false" onAction="#onActionDeleteCustomer" prefHeight="30.0" prefWidth="85.0" text="Delete" />
+            <Button fx:id="buttonModifyCustomer" layoutX="964.0" layoutY="242.0" mnemonicParsing="false" onAction="#onActionModifyCustomer" prefHeight="30.0" prefWidth="85.0" text="Modify" />
+            <Button fx:id="buttonAddCustomer" layoutX="870.0" layoutY="242.0" mnemonicParsing="false" onAction="#onActionAddCustomer" prefHeight="30.0" prefWidth="85.0" text="Add" />
+            <Button fx:id="buttonDeleteAppointment" layoutX="1061.0" layoutY="578.0" mnemonicParsing="false" onAction="#onActionDeleteAppointment" prefHeight="30.0" prefWidth="85.0" text="Delete" />
+            <Button fx:id="buttonModifyAppointment" layoutX="965.0" layoutY="578.0" mnemonicParsing="false" onAction="#onActionModifyAppointment" prefHeight="30.0" prefWidth="85.0" text="Modify" />
+            <Button fx:id="buttonAddAppointment" layoutX="871.0" layoutY="578.0" mnemonicParsing="false" onAction="#onActionAddAppointment" prefHeight="30.0" prefWidth="85.0" text="Add" />
+            <RadioButton fx:id="radioByWeek" layoutX="955.0" layoutY="299.0" mnemonicParsing="false" onAction="#onActionFilterApps" selected="true" text="By Week">
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="toggleGroupAppView" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="radioByMonth" layoutX="1059.0" layoutY="299.0" mnemonicParsing="false" onAction="#onActionFilterApps" text="By Month" toggleGroup="$toggleGroupAppView">
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+            </RadioButton>
+            <Button fx:id="buttonViewCustAppointments" layoutX="14.0" layoutY="242.0" mnemonicParsing="false" onAction="#onActionViewApps" prefHeight="30.0" prefWidth="224.0" text="View Customer's Appointments" />
+            <ComboBox fx:id="comboReports" layoutX="16.0" layoutY="580.0" onAction="#onActionEnableRun" prefHeight="30.0" prefWidth="307.0" promptText="Click to select a report..." />
+            <Button fx:id="buttonRunReport" disable="true" layoutX="338.0" layoutY="580.0" mnemonicParsing="false" onAction="#onActionRunReport" prefHeight="30.0" prefWidth="85.0" text="Run Report" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="labelHeader" layoutX="20.0" layoutY="23.0" text="Appointment Management System" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonExit" layoutX="1083.0" layoutY="727.0" mnemonicParsing="false" onAction="#onActionExit" prefHeight="30.0" prefWidth="85.0" text="Exit" />
+   </children>
+</AnchorPane>

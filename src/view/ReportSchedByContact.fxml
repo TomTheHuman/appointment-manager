@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="541.0" prefWidth="1222.0" style="-fx-background-color: #62607B;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportSchedByContact">
+    <children>
+        <Label fx:id="labelHeader" layoutX="14.0" layoutY="23.0" prefHeight="29.0" prefWidth="286.0" text="Appointment Schedule" textFill="WHITE">
+            <font>
+                <Font name="Segoe UI Bold" size="24.0" />
+            </font>
+        </Label>
+        <Button fx:id="buttonCancel" layoutX="1122.0" layoutY="498.0" mnemonicParsing="false" onAction="#onActionCancel" prefHeight="29.0" prefWidth="85.0" text="Close" />
+      <Label fx:id="labelHeader1" layoutX="14.0" layoutY="52.0" prefHeight="29.0" prefWidth="286.0" text="By Contact" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableViewReport" layoutX="15.0" layoutY="146.0" prefHeight="317.0" prefWidth="1192.0">
+        <columns>
+          <TableColumn fx:id="appIdCol" prefWidth="105.0" text="Appointment ID" />
+          <TableColumn fx:id="appTitleCol" prefWidth="175.0" text="Title" />
+            <TableColumn fx:id="appTypeCol" minWidth="0.0" prefWidth="150.0" text="Type" />
+            <TableColumn fx:id="appDescriptionCol" prefWidth="260.0" text="Description" />
+            <TableColumn fx:id="appStartCol" prefWidth="200.0" text="Start Date/Time" />
+            <TableColumn fx:id="appEndCol" prefWidth="200.0" text="End Date/Time" />
+            <TableColumn fx:id="appCustomerIdCol" prefWidth="102.0" text="Customer ID" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="comboContact" layoutX="886.0" layoutY="103.0" onAction="#onActionGenerate" prefHeight="30.0" prefWidth="321.0" promptText="Click to select a contact..." />
+    </children>
+</AnchorPane>

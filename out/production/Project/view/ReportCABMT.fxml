@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="541.0" prefWidth="390.0" style="-fx-background-color: #62607B;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportCABMT">
+    <children>
+      <TextArea fx:id="textAreaReport" editable="false" layoutX="14.0" layoutY="94.0" prefHeight="378.0" prefWidth="363.0">
+         <font>
+            <Font name="Courier New" size="14.0" />
+         </font></TextArea>
+        <Label fx:id="labelHeader" layoutX="14.0" layoutY="23.0" prefHeight="29.0" prefWidth="286.0" text="Customer Appointments" textFill="WHITE">
+            <font>
+                <Font name="Segoe UI Bold" size="24.0" />
+            </font>
+        </Label>
+        <Button fx:id="buttonCancel" layoutX="289.0" layoutY="498.0" mnemonicParsing="false" onAction="#onActionCancel" prefHeight="29.0" prefWidth="85.0" text="Close" />
+      <Label fx:id="labelHeader1" layoutX="14.0" layoutY="52.0" prefHeight="29.0" prefWidth="286.0" text="By Type &amp; Month" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
